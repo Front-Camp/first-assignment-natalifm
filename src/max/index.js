@@ -7,7 +7,9 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
-  /* your logic here...*/
+  return arr
+    .filter(value =>isFinite(value)&& !isNaN(value))
+    .reduce((previousValue, currentValue) => Math.max(previousValue,currentValue));
 };
 
 export default max;

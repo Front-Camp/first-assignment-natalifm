@@ -8,7 +8,9 @@
  * @return {string} truncated string
  */
 const truncate = (str, length = 0, replacer = '...') => {
-  /* your logic here...*/
+  if(str==='')return str;
+  if (str.length>length) return str;
+  return str.substring(0, length).concat(replacer);
 };
 
 export default truncate;
